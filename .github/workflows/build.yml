@@ -24,7 +24,6 @@ jobs:
       uses: actions/checkout@v4    
     - name: Test Local Manifests
       run: |
-       #repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
         git clone https://github.com/RadGoodNowYT/manifest.git --depth 1 .repo/local_manifests && \
         timeout 1m repo sync --force-sync || { exit_code=$?; [ $exit_code -eq 124 ] || (echo "Error: Process failed with exit code $exit_code"; exit $exit_code); }
         rm -rf .repo
