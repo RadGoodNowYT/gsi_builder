@@ -1,4 +1,4 @@
-name: RisingOS GSI
+name: LineageOS Build
 
 on:
   workflow_dispatch:
