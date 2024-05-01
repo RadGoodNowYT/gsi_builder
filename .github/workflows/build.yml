@@ -11,7 +11,6 @@ jobs:
       contents: write
     steps:
     - name: Cleanup
-      run: rm -rf *
       uses: rokibhasansagar/slimhub_actions@main
       # That's it! Now use your normal steps
     - name: Create workspace
