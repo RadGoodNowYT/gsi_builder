@@ -22,12 +22,14 @@ jobs:
       # Check-out in order to access the repository's files.
     - name: Check-out to repository
       uses: actions/checkout@v4 
+      
     - name: Install repo
       run: |
         mkdir ~/bin
         curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
         chmod a+x ~/bin/repo
         sudo ln -sf ~/bin/repo /usr/bin/repo
+        
     - name: Test Local Manifests
       run: |
         git clone https://github.com/RadGoodNowYT/manifest.git --depth 1 .repo/local_manifests && \
